@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* ensures padding and borders don't overflow (height and width defined will be for the whole elmt)*/
+    background-color: #f8fbff; /* soft background */
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/*Center element*/
+.app-container {
+    height: 100vh;              /* Full screen height */
+    display: flex;              /* Enable flexbox layout */
+    flex-direction: column;     /* Stack children vertically */
+    align-items: center;        /* center horizontally */
+    justify-content: center;    /* center vertically */
+    padding: 20px;              
+  }
+
+  /*Style title */
+  .app-title {
+    font-size: 2.5rem; /*2.5x bigger than root font size (16px default)*/
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 24px;
+  }
+  
+
+  .city-form {
+    display: flex;
+    gap: 12px; /* space bw form elemts*/
+    margin-bottom: 24px;
+  }
+
+  .city-input {
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 200px;
+  }
+  
+  .submit-btn {
+    background-color: #3b82f6; 
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 1rem;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #2563eb; /* darker blue */
+  }
+
+  .weather-card {
+    background-color: white;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px;
+  }
+  
+  .weather-icon {
+    width: 64px;
+    height: 64px;
+    margin: 8px 0;
+  }
+  
+  .temp {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 8px 0;
+  }
