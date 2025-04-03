@@ -53,7 +53,15 @@ body {
     background-color: #2563eb; /* darker blue */
   }
 
+  .weather-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
   .weather-card {
+    position: relative;
     background-color: white;
     padding: 24px;
     border-radius: 16px;
@@ -72,4 +80,26 @@ body {
     font-size: 1.5rem;
     font-weight: 600;
     margin: 8px 0;
+  }
+
+  .del-card-btn{
+    position: absolute;
+    top: 8px;
+    left: 8px; 
+    border: none; 
+    background-color: transparent;
+    color : gray; 
+    align-items: flex-start;
+    padding: 8px 10px; /* make bigger for easier click */
+  }
+
+  .del-card-btn:hover{
+    color : black; 
+  }
+
+  .error-message{
+    background-color: red ;
+    padding: 3px 5px;
+    border-radius: 5px;
+    color: white; 
   }

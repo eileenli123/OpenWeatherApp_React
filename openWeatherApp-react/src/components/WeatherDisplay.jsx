@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 
 
-const WeatherDisplay = ({ city }) => {
+const WeatherDisplay = ({ city, onDelete, onError }) => {
 
     const API_KEY = '9ef1e583f2036afba84533ae7473074c';
     const [weatherData, setWeatherData] = useState(null);
+
 
     const fetchWeather = async (city) => {
         console.log(`trying to fetch ${city}`);
@@ -24,7 +25,9 @@ const WeatherDisplay = ({ city }) => {
 
         } catch (err) {
             console.error(err.message);
+            onDelete(city); //remove the city from list
             setWeatherData(null);
+            onError(`Could not find '${city}'`)
         }
     };
 
@@ -47,6 +50,7 @@ const WeatherDisplay = ({ city }) => {
 
     return (
         <div className='weather-card'>
+            <button className='del-card-btn' onClick={() => onDelete(city)}> X </button>
             <h2> {name} </h2>
             <img src={weather_icon_url}
                 alt={weatherInfo.description}
